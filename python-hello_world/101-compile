@@ -1,0 +1,18 @@
+import py_compile
+import os
+
+# Get the Python file name from the environment variable
+pyfile = os.getenv('PYFILE')
+
+if pyfile:
+    # Compile the Python file
+    try:
+        py_compile.compile(pyfile, doraise=True)
+        compiled_file = pyfile + 'c'
+        print(f"Compilation successful. Compiled file: {compiled_file}")
+    except py_compile.PyCompileError as e:
+        print(f"Compilation failed: {e}")
+        exit(1)
+else:
+    print("Error: Environment variable $PYFILE is not set.")
+    exit(1)
