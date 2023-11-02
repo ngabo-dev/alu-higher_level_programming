@@ -1,4 +1,3 @@
 #!/usr/bin/python3
-for char in range(ord('a'),ord('z')+1):
-    if chr(char) != 'e' and chr(char) != 'q':
-        print(chr(char), end='')
+alphabet = ''.join(chr(char) for char in range(ord('a'), ord('z') + 1) if chr(char) not in ['e', 'q'])
+print("{}".format(alphabet))
