@@ -2,8 +2,8 @@
 def islower(c):
     return 97 <= ord(c) <= 122
 
-character = input("")
+character = input("enter character:")
 if islower(character):
-    print(f"{character} => lower.")
+    print(f"{character} => lower")
 else:
-    print(f"{character} => upper.")
+    print(f"{character} => upper")
