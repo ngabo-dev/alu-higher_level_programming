@@ -4,6 +4,6 @@ def islower(c):
 
 character = input("")
 if islower(character):
-    print(f"{character} is lower.")
+    print(f"{character} => lower.")
 else:
-    print(f"{character} is upper.")
+    print(f"{character} => upper.")
