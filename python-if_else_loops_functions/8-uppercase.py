@@ -5,6 +5,6 @@ def uppercase(input_string):
         if 97 <= ord(char) <= 122:
             char = chr(ord(char) - 32)
         output_string += char
-    print(f"{output_string}\n")
+    print("{}\n".format(output_string))
 input_string = input("Enter a string: ")
 uppercase(input_string)
