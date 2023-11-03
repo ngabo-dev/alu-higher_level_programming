@@ -2,7 +2,7 @@
 def islower(c):
     return 97 <= ord(c) <= 122
 
-character = input("Enter a character: ")
+character = input("")
 if islower(character):
     print(f"{character} is lower.")
 else:
