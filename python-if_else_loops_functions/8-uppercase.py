@@ -6,5 +6,17 @@ def uppercase(input_string):
             char = chr(ord(char) - 32)
         output_string += char
     print("{}\n".format(output_string))
-input_string = input("Enter a string: ")
-uppercase(input_string)
+
+#test cases
+test_cases = [
+    "holberton",
+    "Holberton School",
+    "Holberton School, 98 battery street",
+    "",
+    "98",
+    "z"
+]
+
+for test_case in test_cases:
+    print("Input: {}".format(test_case))
+    uppercase(test_case)
