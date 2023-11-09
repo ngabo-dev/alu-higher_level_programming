@@ -6,6 +6,6 @@ def print_matrix_integer(matrix=[[]]):
             if j != sub_len - 1:
                 end_char = ' '
             else:
-                end_char = ''
+                end_char = ' '
             print("{:d}".format(matrix[i][j]), end=end_char)
             print("")
