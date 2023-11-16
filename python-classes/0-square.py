@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-""" defining an empty class square"""
+""" no modules to import"""
 
-def class Square:
+class Square():
+"""defining class an empty class"""
 	pass
