@@ -1,8 +1,9 @@
 #!/usr/bin/python3
+"""no module to import"""
+
+
 class Square:
-    """
-    This class represents a square.
-    """
+    """This class represents a square."""
 
     def __init__(self, size=0):
         """
