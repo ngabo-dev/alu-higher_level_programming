@@ -14,10 +14,6 @@ class Square:
     def __init__(self, size=0, position=(0, 0)):
         """
         Initializes a new instance of the Square class.
-
-        Parameters:
-            size (int, optional): The size of each side of the square. Default is 0.
-            position (tuple, optional): The position of the square. Default is (0, 0).
         """
         self.size = size
         self.position = position
