@@ -10,7 +10,7 @@ def lookup(obj):
         obj: An object to inspect.
 
     Returns:
-        list: A list containing the names of attributes and methods of the object.
+        list: A list containing the names of attributes and methods.
     """
     result = []
     for attribute_name in dir(obj):
