@@ -72,4 +72,3 @@ class Rectangle(BaseGeometry):
         Prints the rectangle description.
         """
         print(str(self))
-
