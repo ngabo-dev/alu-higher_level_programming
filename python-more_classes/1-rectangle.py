@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" there is no module imported"""
+""" no module imported"""
 
 
 class Rectangle:
