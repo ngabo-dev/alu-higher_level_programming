@@ -1,74 +1,48 @@
 #!/usr/bin/python3
-"""no module defined"""
+"""Module defining Rectangle class."""
 
 
-class BaseGeometry:
-    """
-    A class representing base geometry.
-    """
-
-    def area(self):
-        """
-        Raises an Exception with the message "area() is not implemented."
-        """
-        raise Exception("area() is not implemented")
-
-    def integer_validator(self, name, value):
-        """
-        Validates the value to ensure it is an integer and greater than 0.
-
-        Parameters:
-            name (str): The name of the value.
-            value: The value to be validated.
-
-        Raises:
-            TypeError: If the value is not an integer.
-            ValueError: If the value is less than or equal to 0.
-        """
-        if not isinstance(value, int):
-            raise TypeError(f"{name} must be an integer")
-        if value <= 0:
-            raise ValueError(f"{name} must be greater than 0")
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
 class Rectangle(BaseGeometry):
     """
-    A class representing a rectangle, inheriting from BaseGeometry.
+    Rectangle class, inherits from BaseGeometry.
+
+    Attributes:
+        - width (int): private, positive integer
+        - height (int): private, positive integer
     """
 
     def __init__(self, width, height):
         """
-        Initializes a rectangle with the given width and height.
+        Initializes a Rectangle instance.
 
-        Parameters:
-            width (int): The width of the rectangle.
-            height (int): The height of the rectangle.
+        Args:
+            - width (int): width of the rectangle
+            - height (int): height of the rectangle
         """
-        self.integer_validator("width", width)
-        self.integer_validator("height", height)
-        self.__width = width
-        self.__height = height
+        super().__init__()
 
-    def area(self):
-        """
-        Computes and returns the area of the rectangle.
+        # Validate and set width
+        self.__width = self.integer_validator("width", width)
 
-        Returns:
-            int: The area of the rectangle.
-        """
-        return self.__width * self.__height
+        # Validate and set height
+        self.__height = self.integer_validator("height", height)
 
     def __str__(self):
-        """
-        Returns a string representation of the rectangle.
+        """Returns a formatted string representation of the Rectangle."""
+        return "[Rectangle] {}/{}".format(self.__width, self.__height)
 
-        Returns:
-            str: The rectangle description.
-        """
-        return f"[Rectangle] {self.__width}/{self.__height}"
+    def area(self):
+        """Calculates and returns the area of the rectangle."""
+        return self.__width * self.__height
 
-    def print(self):
-        """
-        Prints the rectangle description.
-        """
-        print(str(self))
+    def display(self):
+        """Displays the rectangle using '#' characters."""
+        for i in range(self.__height):
+            print("#" * self.__width)
+
+    def __repr__(self):
+        """Returns a string representation of the Rectangle."""
+        return "Rectangle({}, {})".format(self.__width, self.__height)
