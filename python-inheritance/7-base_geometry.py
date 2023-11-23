@@ -1,31 +1,34 @@
-#!/usr/bin/python3
-"""event validator"""
+s module contains a class BaseGeometry
+    (based on 6-base_geometry.py).
+"""
 
 
-class BaseGeometry:
-    """
-    A class representing base geometry.
+class BaseGeometry():
+    """class BaseGeometry
+        (based on 6-base_geometry.py).
     """
 
     def area(self):
-        """
-        Raises an Exception with the message "area() is not implemented."
+        """That raises an Exception with the message
+            area() is not implemented.
+
+        Raises:
+            Exception: area() is not implemented
         """
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
-        """
-        Validates the value to ensure it is an integer and greater than 0.
+        """That validates value:.
 
-        Parameters:
-            name (str): The name of the value.
-            value: The value to be validated.
+        Arguments:
+            name (str) -- name.
+            value (int) -- value.
 
         Raises:
-            TypeError: If the value is not an integer.
-            ValueError: If the value is less than or equal to 0.
+            TypeError: <name> must be an integer
+            ValueError: <name> must be greater than 0
         """
-        if not isinstance(value, int):
-            raise TypeError(f"{name} must be an integer")
-        if value <= 0:
-            raise ValueError(f"{name} must be greater than 0")
+        if type(value) is not int:
+            raise TypeError("{} must be an integer".format(name))
+        elif value <= 0:
+            raise ValueError("{} must be greater than 0".format(name))
