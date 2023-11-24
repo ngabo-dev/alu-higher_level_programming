@@ -1,3 +1,7 @@
+#!/usr/bin/python3
+"""module to display an empty class"""
+
+
 def read_file(filename=""):
     """
     Reads a text file and prints its content to stdout.
