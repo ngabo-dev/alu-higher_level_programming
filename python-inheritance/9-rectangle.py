@@ -1,48 +1,25 @@
 #!/usr/bin/python3
-"""Module defining Rectangle class."""
-
-
+"""Defines a class Rectangle that inherits from BaseGeometry."""
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
 class Rectangle(BaseGeometry):
-    """
-    Rectangle class, inherits from BaseGeometry.
-
-    Attributes:
-        - width (int): private, positive integer
-        - height (int): private, positive integer
-    """
+    """this class represents a rectangle using BaseGeometry"""
 
     def __init__(self, width, height):
-        """
-        Initializes a Rectangle instance.
+        """Intialize a new rectangle"""
 
-        Args:
-            - width (int): width of the rectangle
-            - height (int): height of the rectangle
-        """
-        super().__init__()
-
-        # Validate and set width
-        self.__width = self.integer_validator("width", width)
-
-        # Validate and set height
-        self.__height = self.integer_validator("height", height)
-
-    def __str__(self):
-        """Returns a formatted string representation of the Rectangle."""
-        return "[Rectangle] {}/{}".format(self.__width, self.__height)
+        super().integer_validator("width", width)
+        self.__width = width
+        super().integer_validator("height", height)
+        self.__height = height
 
     def area(self):
-        """Calculates and returns the area of the rectangle."""
+        """returns the area of the rectangle"""
         return self.__width * self.__height
 
-    def display(self):
-        """Displays the rectangle using '#' characters."""
-        for i in range(self.__height):
-            print("#" * self.__width)
-
-    def __repr__(self):
-        """Returns a string representation of the Rectangle."""
-        return "Rectangle({}, {})".format(self.__width, self.__height)
+    def __str__(self):
+        """returns the print() and str() representation of a Rectangle"""
+        string = "[" + str(self.__class__.__name__) + "] "
+        string += str(self.__width) + "/" + str(self.__height)
+        return string
