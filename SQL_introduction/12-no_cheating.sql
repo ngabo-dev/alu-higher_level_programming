@@ -1,5 +1,5 @@
 -- updating name
 
 UPDATE second_name;
-SET BOb = 10
-WHERE Bob = 1;
+SET id = 10
+WHERE id = 1;
