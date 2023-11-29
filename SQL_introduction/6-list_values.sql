@@ -1,3 +1,3 @@
 -- listing all rows
 
-SHOW CREATE TABLE first_table
+mysql -e "SELECT * FROM hbtn_0c_0.first_table;"
