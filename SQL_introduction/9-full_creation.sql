@@ -1,6 +1,6 @@
 -- creating a second table in the database
 
-CREATE second_table IF NOT EXISTS (id INT, name VARCHAR, score INT);
+CREATE hbtn_0c_0.second_table IF NOT EXISTS (id INT, name VARCHAR, score INT);
 VALUES
 ('1', 'John', '10')
 ('2', 'Alex', '3')
