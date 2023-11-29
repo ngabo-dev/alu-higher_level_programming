@@ -1,5 +1,5 @@
--- updating name
+-- updating the score of Bob to 10 using only the name field
 
 UPDATE second_name;
 SET score = 10
-WHERE name = Bob;
+WHERE name = 'Bob';
