@@ -1,4 +1,4 @@
 -- listing all rows
 
-select t1.*
-from first_table t1
+SELECT t1.*
+FROM first_table t1
