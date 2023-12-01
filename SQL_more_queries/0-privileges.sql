@@ -1,4 +1,13 @@
--- listing previleges of MYSQL users
+-- Revoke all existing privileges
+REVOKE ALL PRIVILEGES ON *.* FROM 'user_0d_1'@'localhost';
+
+-- Grant the expected privileges
+GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, RELOAD, SHUTDOWN, PROCESS, FILE, REFERENCES, INDEX, ALTER, SHOW DATABASES, SUPER, CREATE TEMPORARY TABLES, LOCK TABLES, EXECUTE, REPLICATION SLAVE, REPLICATION CLIENT, CREATE VIEW, SHOW VIEW, CREATE ROUTINE, ALTER ROUTINE, CREATE USER, EVENT, TRIGGER, CREATE TABLESPACE, CREATE ROLE, DROP ROLE ON *.* TO 'user_0d_1'@'localhost';
+
+-- Grant additional specific privileges as needed
+GRANT APPLICATION_PASSWORD_ADMIN, AUDIT_ADMIN, BACKUP_ADMIN, BINLOG_ADMIN, BINLOG_ENCRYPTION_ADMIN, ... TO 'user_0d_1'@'localhost';
+
+1 -- listing previleges of MYSQL users
 
 SHOW GRANTS FOR 'user_0d_1'@'localhost';
 SHOW GRANTS FOR 'user_0d_2'@'localhost';
