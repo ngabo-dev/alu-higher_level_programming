@@ -25,14 +25,3 @@ def add_integer(a, b=98):
 
     # Return the sum of a and b
     return a + b
-
-# Example usage:
-result = add_integer(5, 3.5)
-print(result)  # Output: 8
-
-result = add_integer(10)
-print(result)  # Output: 108
-
-# TypeError in action:
-#result = add_integer("string", 5)
-#print(result)
