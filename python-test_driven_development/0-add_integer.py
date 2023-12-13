@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+""" modeule documented"""
 
 def add_integer(a, b=98):
     """
