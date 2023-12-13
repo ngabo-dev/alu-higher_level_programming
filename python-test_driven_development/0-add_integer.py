@@ -34,6 +34,5 @@ result = add_integer(10)
 print(result)  # Output: 108
 
 # TypeError in action:
-result = add_integer("string", 5)
-print(result)
-
+#result = add_integer("string", 5)
+#print(result)
