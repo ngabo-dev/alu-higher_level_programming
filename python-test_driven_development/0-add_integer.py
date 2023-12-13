@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" modeule documented"""
+""" modeule documented correctly"""
 
 def add_integer(a, b=98):
     """
@@ -15,19 +15,11 @@ def add_integer(a, b=98):
     Raises:
     TypeError: If either a or b is not an integer or float.
     """
-    # Check if a is an integer or float
-    if not (isinstance(a, (int, float)):
+    # Check if Both a and b are integers or floats
+    if not isinstance(a, (int, float)):
         raise TypeError("a must be an integer")
-    # Check if b is an integer or float
-    if not isinstance(b, (int, float))):
+
+    if not isinstance(b, (int, float)):
         raise TypeError("b must be an integer")
-
-    if isinstance(b, str):
-        raise TypeError("b must be an integer or float, not a string")
-
-    # Cast a and b to integers if they are floats
-    a = int(a)
-    b = int(b)
-
-    # Return the sum of a and b
-    return a + b
+    
+    return int(a) + int(b)

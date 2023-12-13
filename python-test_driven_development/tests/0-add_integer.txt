@@ -1,11 +1,10 @@
-# Test Case 1
-Input: 5, 3.5
-Expected Output: 8
+# Test case 1
+result1 = 0-add_integer(1, 2)
+print(result1)
 
-# Test Case 2
-Input: 10
-Expected Output: 108
+# Test case 2
+result2 = 0-add_integer(100, -2)
+print(result2)
 
-# Test Case 3 - Uncommented to test TypeError
-Input: "string", 5
-Expected Output: TypeError
+# Test case 3
+result3 = 0-add_integer(2)
