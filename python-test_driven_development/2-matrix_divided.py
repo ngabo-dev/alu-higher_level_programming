@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+""" module now documented"""
 
 def matrix_divided(matrix, div):
     """Divides all elements of a matrix.
@@ -41,7 +41,7 @@ integers/floats")
             raise TypeError("Each row of the matrix must have the same size")
     if type(div) is not int and type(div) is not float:
         raise TypeError("div must be a number")
-    if div is 0:
+    if div == 0:
         raise ZeroDivisionError("division by zero")
     new_matrix = []
     for row in matrix:
