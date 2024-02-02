@@ -1,11 +1,9 @@
 #!/usr/bin/node
 class Rectangle {
-  constructor (w, h) {
-    // Initialize the instance attributes width and height
-    this.width = w;
-    this.height = h;
+  constructor(w, h) {
+    this.width = w || 0;
+    this.height = h || 0;
   }
 }
-const myRectangle = new Rectangle(10, 5);
-console.log(myRectangle.width);
-console.log(myRectangle.height);
+
+module.exports = Rectangle;
