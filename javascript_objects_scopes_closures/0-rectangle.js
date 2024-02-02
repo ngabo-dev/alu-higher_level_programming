@@ -1,6 +1,6 @@
 #!/usr/bin/node
 class Rectangle {
-	constructor() { ... }
+	constructor()
 }
 const myRectangle = new Rectangle();
 console.log(myRectangle);
