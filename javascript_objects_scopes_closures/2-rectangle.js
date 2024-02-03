@@ -7,9 +7,8 @@ class Rectangle {
       this.width = w;
       this.height = h;
     } else {
-      // Create an instance with width and height set to undefined
-      this.width = undefined;
-      this.height = undefined;
+      // Return an empty object if conditions are not met
+      return {};
     }
   }
 }
