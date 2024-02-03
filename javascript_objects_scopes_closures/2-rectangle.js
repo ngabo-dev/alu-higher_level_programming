@@ -8,7 +8,8 @@ class Rectangle {
       this.height = h;
     } else {
       // Create an instance with width and height set to undefined
-      return new Rectangle();
+      this.width = undefined;
+      this.height = undefined;
     }
   }
 }
