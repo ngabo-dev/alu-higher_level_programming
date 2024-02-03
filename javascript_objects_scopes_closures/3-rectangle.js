@@ -1,12 +1,10 @@
 #!/usr/bin/node
-
-class Rectangle {
+module.exports = class Rectangle {
   constructor (w, h) {
-    if (w <= 0 || h <= 0) {
-      return {}; // Return an empty object if width or height is not positive
+    if (w > 0 && h > 0) {
+      this.width = w;
+      this.height = h;
     }
-    this.width = w;
-    this.height = h;
   }
 
   print () {
@@ -14,10 +12,4 @@ class Rectangle {
       console.log('X'.repeat(this.width));
     }
   }
-}
-
-const r1 = new Rectangle(2, 3);
-r1.print();
-
-const r2 = new Rectangle(10, 5);
-r2.print();
+};
