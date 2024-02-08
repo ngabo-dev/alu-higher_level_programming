@@ -7,7 +7,6 @@ function writeToFile (filePath, content) {
       console.error(err);
       return;
     }
-    console.log('');
   });
 }
 
