@@ -17,18 +17,32 @@ function printCharactersInMovie (movieId) {
 
     const movie = JSON.parse(body);
     const characterUrls = movie.characters;
+    const characters = [];
 
-    characterUrls.forEach(characterUrl => {
-      request.get(characterUrl, (error, response, body) => {
-        if (error) {
-          console.error(error);
-          return;
-        }
+    // Fetch all character details
+    Promise.all(characterUrls.map(characterUrl => {
+      return new Promise((resolve, reject) => {
+        request.get(characterUrl, (error, response, body) => {
+          if (error) {
+            reject(new Error(error));
+            return;
+          }
 
-        if (response.statusCode !== 200) {
-          console.error(`Failed to fetch character data. Status code: ${response.statusCode}`);
-        }
+          if (response.statusCode !== 200) {
+            reject(new Error(`Failed to fetch character data. Status code: ${response.statusCode}`));
+            return;
+          }
+
+          const character = JSON.parse(body);
+          characters.push(character.name);
+          resolve();
+        });
       });
+    })).then(() => {
+      // Print characters in the order they appear in the film
+      characters.forEach(character => console.log(character));
+    }).catch(error => {
+      console.error(error);
     });
   });
 }
