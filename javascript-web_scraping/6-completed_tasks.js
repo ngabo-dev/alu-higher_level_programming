@@ -22,8 +22,6 @@ function computeCompletedTasks (apiUrl) {
         completedTasks[userId] = (completedTasks[userId] || 0) + 1;
       }
     });
-
-    console.log('Users with completed tasks:');
     Object.keys(completedTasks).forEach(userId => {
       console.log(`${userId}: ${completedTasks[userId]}`);
     });
