@@ -16,7 +16,7 @@ function getMovieTitle (movieId) {
     }
 
     const movieData = JSON.parse(body);
-    console.log(`Title of Episode ${movieData.episode_id}: ${movieData.title}`);
+    console.log(`Title of Episode ${movieData.title}`);
   });
 }
 
