@@ -27,10 +27,7 @@ function printCharactersInMovie (movieId) {
 
         if (response.statusCode !== 200) {
           console.error(`Failed to fetch character data. Status code: ${response.statusCode}`);
-          return;
         }
-
-        const character = JSON.parse(body);
       });
     });
   });
