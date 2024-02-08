@@ -31,7 +31,6 @@ function printCharactersInMovie (movieId) {
         }
 
         const character = JSON.parse(body);
-        console.log(character.name);
       });
     });
   });
