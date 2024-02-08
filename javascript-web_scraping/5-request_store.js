@@ -17,9 +17,7 @@ function fetchAndStoreWebpage (url, filePath) {
     fs.writeFile(filePath, body, { encoding: 'utf-8' }, (err) => {
       if (err) {
         console.error(err);
-        return;
       }
-      console.log(`${filePath}`);
     });
   });
 }
