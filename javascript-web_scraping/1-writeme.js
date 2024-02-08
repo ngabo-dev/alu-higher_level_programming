@@ -7,7 +7,7 @@ function writeToFile (filePath, content) {
       console.error(err);
       return;
     }
-    console.log('Content has been written to the file successfully.');
+    console.log('');
   });
 }
 
